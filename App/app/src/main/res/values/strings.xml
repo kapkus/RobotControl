@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RobotUI</string>
+
+    <string name="navigation_drawer_open">Otwórz menu</string>
+    <string name="navigation_drawer_close">Zamknij menu</string>
+    <string name="info_description">Aplikacja do sterowania robotem typu SCARA, zaprojektowana została w sposób, który ułatwi użytkownikowi wykonywanie ruchów we wszystkich osiach robota. </string>
+</resources>

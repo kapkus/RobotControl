@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_option_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/dark_theme_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tryb ciemny"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dark_theme_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/dark_theme_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/horizontal_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/settings_option_0"
+
+        android:background="#c0c0c0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_option_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_option_0"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/joystick_sensitivity_XY_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Czułość joysticka XY"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekbar_joystick_XY"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:padding="10dp"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/joystick_sensitivity_XY_txt" />
+
+        <TextView
+            android:id="@+id/joystick_sensitivity_Z_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Czułość joysticka Z"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/seekbar_joystick_XY"
+            app:layout_constraintTop_toBottomOf="@+id/seekbar_joystick_XY" />
+
+        <SeekBar
+            android:id="@+id/seekbar_joystick_Z"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:padding="1dp"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/joystick_sensitivity_Z_txt"
+            app:layout_constraintTop_toBottomOf="@+id/joystick_sensitivity_Z_txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
